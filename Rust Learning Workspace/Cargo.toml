@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "arithmetic-and-type-casting",
+    "console-input",
+    "dataTypes",
+    "flow-control",
+    "functions",
+    "HelloWorld",
+    "ownership",
+    "Struct",
+    "variables"
+]
