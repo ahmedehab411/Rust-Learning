@@ -9,4 +9,4 @@ members = [
     "ownership",
     "Struct",
     "variables"
-, "enum-and-pattern-matching", "module-system"]
+, "enum-and-pattern-matching", "module-system", "collections"]
