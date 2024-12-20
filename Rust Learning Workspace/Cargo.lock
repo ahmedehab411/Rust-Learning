@@ -46,6 +46,10 @@ name = "enum-and-pattern-matching"
 version = "0.1.0"
 
 [[package]]
+name = "error-handling"
+version = "0.1.0"
+
+[[package]]
 name = "flow-control"
 version = "0.1.0"
 
