@@ -1,7 +1,7 @@
 use std::io;
 
 fn main() {
-    //Here is a macro that immediately quit the program and put out an error message.
+    //panic! Here is a macro that immediately quit the program and put out an error message.
     /*Note : by using RUST_BACKTRACE=1 as env variable it gives you a back trace
     to how the error happened and generated. like error happened at c where it's called
     by b which it's called by a that is called in the main function. */
@@ -28,10 +28,12 @@ fn main() {
             other_error=>panic!("Error: {:?}",other_error),
         }
     };
+
     /*unWrap method is the same as the first match statement so we can write it like that
     it returns the file if succeed or panic with error if failed*/
     let f = File::open("hello.text").unwrap();
     println!("File opened successfully.");
+
     //we can use expect to modify the message appear on any panic
     //let f = File::open("new.text").expect("Failed to open new.text");
 
@@ -79,7 +81,7 @@ fn read_username_from_file() -> Result<String,io::Error> {
     we also can't use it in the main function as the main function doesn't return
     anything. it can only be used in a function that returns Result or Option types.*/
 
-   //The most simplified version of this code is the following
+   //another simplified version of this code is the following
    /*let mut s = String::new();
     File::open("hello.text")?.read_to_string(&mut s)?
     Ok(s) */

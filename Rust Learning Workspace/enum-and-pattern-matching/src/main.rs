@@ -1,7 +1,7 @@
 //Enums allow us to enumerate a list of variance
 enum IpAddrKind {
-    v4(String),
-    v6(String),
+    V4(String),
+    V6(String),
 }
 
 //Note we can use enum variance instead of more than 1 struct as follow:
@@ -14,7 +14,7 @@ enum Message {
 
 //we can also define enum methods
 impl Message {
-    fn Hello() {
+    fn hello() {
         println!("Im here");
     }
 }
@@ -31,12 +31,13 @@ enum Option<T> {
     None,
 }*/
 fn main() {
-    let four = IpAddrKind::v4;
-    let six = IpAddrKind::v6;
+    let four = IpAddrKind::V4;
+    let six = IpAddrKind::V6;
     /*let localhost = IpAddr {
         kind: IpAddrKind::v4,
         address: String::from("127.0.0.1"),
     };*/
+    
     //another way is to make enum variance by adding (String) to v4 and v6 
     //it also accepts any data type
     let localhost = IpAddrKind::v4(String::from("127.0.0.1"));
